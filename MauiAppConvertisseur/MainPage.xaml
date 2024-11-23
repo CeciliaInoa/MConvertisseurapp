@@ -5,12 +5,12 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="20,0"
-            Spacing="15"
+            Padding="30,0"
+            Spacing="25"
             VerticalOptions="Center">
             <Image
                 Source="temperature.png"
-                HeightRequest="150"
+                HeightRequest="90"
                 HorizontalOptions="Center" />
                 
 
@@ -25,6 +25,50 @@
                 FontSize="20"
                 TextColor="MidnightBlue"
                 HorizontalOptions="Center" />
+
+            <Grid Padding="0,10"
+                  RowSpacing="5"
+                  ColumnSpacing="5"
+                  HorizontalOptions="Center">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                
+                <Entry Grid.Column="0" Grid.Row="0"
+                        x:Name="celEntry"
+                        Placeholder="Tapez ⁰C"
+                        WidthRequest="250"/>
+
+                <Entry Grid.Column="1" Grid.Row="1"
+                        x:Name="fahEntry"
+                        Placeholder="Tapez ⁰F"
+                        WidthRequest="250"/>
+
+                <ImageButton Grid.Column="2" Grid.Row="0"
+                             Source="arrow.png"
+                             Margin="0, 25, 0, 0"
+                             HeightRequest="40"
+                             Clicked="Button_Clicked"/>
+                
+                <ImageButton Grid.Column="2" Grid.Row="1"
+                             Source="arrow.png"
+                             Margin="0, 25, 0, 0"
+                             HeightRequest="40"
+                             Clicked="Button_Clicked"/>
+
+                <Label Grid.Column="3" Grid.Row="0" Text="⁰F"/>
+
+                <Label Grid.Column="3" Grid.Row="2" Text="⁰C"/>
+                           
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>
