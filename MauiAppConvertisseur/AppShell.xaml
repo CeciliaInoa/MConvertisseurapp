@@ -4,12 +4,32 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiAppConvertisseur"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="MauiAppConvertisseur">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+   
 
+
+    <FlyoutItem Title="Convertisseur" Icon="converter.jpg">
+        <ShellContent Title="Convertisseur"
+                      ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+    
+    
+     <FlyoutItem Title="À propos" Icon="info.png">
+        <ShellContent Title="À propos"
+                      ContentTemplate="{DataTemplate local:NewPage1}" />
+    </FlyoutItem>
+
+    <Shell.FlyoutHeader>
+        <StackLayout BackgroundColor="DeepSkyBlue" Padding="10 ">
+            <Label Text="Bienvenue!" TextColor="WhiteSmoke" FontSize="Large" />
+        </StackLayout>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <Label Text="2024 © Cecilia Inoa" TextColor="WhiteSmoke"  FontSize="Small"/>
+    </Shell.FlyoutFooter>
+    
+    
 </Shell>
+
