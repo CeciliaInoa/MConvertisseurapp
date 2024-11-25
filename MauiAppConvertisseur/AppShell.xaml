@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiAppConvertisseur"
     Shell.FlyoutBehavior="Flyout"
-    Title="MauiAppConvertisseur">
+    >
 
    
 
@@ -23,11 +23,14 @@
 
     <Shell.FlyoutHeader>
         <StackLayout BackgroundColor="DeepSkyBlue" Padding="10 ">
-            <Label Text="Bienvenue!" TextColor="WhiteSmoke" FontSize="Large" />
+            <Label Text="Bienvenue!" TextColor="WhiteSmoke" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </StackLayout>
     </Shell.FlyoutHeader>
     <Shell.FlyoutFooter>
-        <Label Text="2024 © Cecilia Inoa" TextColor="WhiteSmoke"  FontSize="Small"/>
+        <StackLayout BackgroundColor="DeepSkyBlue" Padding="5 ">
+            <Label Text="EasyConverter" TextColor="WhiteSmoke"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            <Label Text="2024 © Cecilia Inoa" TextColor="WhiteSmoke"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
     </Shell.FlyoutFooter>
     
     
